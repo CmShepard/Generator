@@ -445,40 +445,40 @@ namespace Generator
             string Text = "";
             switch (op){
                 case 0:
-                    operation = " + ";
+                    operation = "\u00a0+\u00a0";
                     break;
                 case 1:
-                    operation = " - ";
+                    operation = "\u00a0-\u00a0";
                     break;
                 case 2:
-                    operation = " " + multSign + " ";
+                    operation = "\u00a0" + multSign + "\u00a0";
                     break;
                 case 3:
-                    operation = " " + divSign + " ";
+                    operation = "\u00a0" + divSign + "\u00a0";
                     break;
             };
             if (i ==j-1){
                 if (mode == 0) {
-                    Text += first.ToString() + operation + second.ToString() + " =";
+                    Text += first.ToString() + operation + second.ToString() + "\u00a0=";
                 } else if (mode ==1) {
                     if(xpos == 1)
-                        Text += "x" + operation + first.ToString() + " = " + second.ToString();
+                        Text += "x" + operation + first.ToString() + "\u00a0=\u00a0" + second.ToString();
                     else
-                        Text += first.ToString() + operation + "x = " + second.ToString();
+                        Text += first.ToString() + operation + "x\u00a0=\u00a0" + second.ToString();
                 }
             }else{
                 if (mode == 0) {
 
-                    Text += first.ToString() + operation + second.ToString() + " =";
+                    Text += first.ToString() + operation + second.ToString() + "\u00a0=";
 
                 } else if(mode == 1) {
                     if (xpos == 1) {
 
-                         Text += "x" + operation + first.ToString() + " = " + second.ToString();
+                         Text += "x" + operation + first.ToString() + "\u00a0=\u00a0" + second.ToString();
 
                     } else {
                         
-                        Text += first.ToString() + operation + "x = " + second.ToString();
+                        Text += first.ToString() + operation + "x\u00a0=\u00a0" + second.ToString();
                     }
                 }
                 switch (devideType) {
